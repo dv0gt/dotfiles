@@ -15,32 +15,29 @@ local opts = {
 }
 local leader_mappings = {
   name = "Global Leader",
-  ["<Leader>w"] = { ":write<cr>", "write buffer" },
-  ["<Leader>q"] = { ":bd<cr>", "close buffer" },
-  ["<Leader>u"] = { ":undo<cr>", "undo" },
-  ["<Leader>r"] = { ":redo<cr>", "redo" },
+  ["<leader>f"] = { name = "+find" },
   ["<Leader>ff"] = { ":Telescope find_files hidden=true<cr>", "find files in workspace" },
   ["<Leader>fg"] = { ":Telescope live_grep<cr>", "find in files in workspace" },
   ["<Leader>fb"] = { ":Telescope buffers<cr>", "show open buffers" },
-  ["<Leader>e"] = { ":NvimTreeToggle<cr>", "open/close nvimTree" },
+  ["<Leader>e"] = { ":NvimTreeToggle<cr>", "Explorer" },
+  ["<leader>d"] = { name = "+debug" },
   ["<Leader>db"] = { ":lua require'dap'.toggle_breakpoint()<cr>", "toggle breakpoint" },
   ["<Leader>ds"] = { ":lua require'dap'.continue()<cr>", "start debugger" },
   ["<Leader>di"] = { ":lua require'dap'.step_into()<cr>", "step into" },
   ["<Leader>do"] = { ":lua require'dap'.step_over()<cr>", "step over" },
-  -- http requst
-  ["<Leader>hr"] = { "<Plug>RestNvim", "Run HTTP request at current cursor" },
-  ["<Leader>hl"] = { "<Plug>RestNvimLast", "Run last HTTP request" },
-  ["<Leader>hs"] = { "<Plug>RestNvimPreview", "Show curl preview of request" },
+  -- harpoon
+  ["<leader>h"] = { name = "+harpoon" },
   -- code
+  ["<leader>c"] = { name = "+code" },
   ["<Leader>cs"] = { ":Lspsaga signature_help<CR>", "Show code signature" },
   ["<Leader>cr"] = { ":Lspsaga rename<CR>", "Rename" },
   ["<Leader>ch"] = { ":Lspsaga show_line_diagnostics<CR>", "Show line diagnostics" },
-
-  ["<Leader>so"] = { function()
-    vim.opt.spell = not (vim.opt.spell:get())
-  end, "Rename" },
-  -- uuid
-  ["<Leader>gu"] = { ":r !uuidgen|tr \"[A-Z]\" \"[a-z]\"<CR>", "generate uuid" },
+  ["<Leader>cd"] = { ":lua vim.lsp.buf.definition()<CR>", "Goto definition" },
+  -- util
+  ["<leader>u"] = { name = "+util" },
+  ["<Leader>uu"] = { ":r !uuidgen|tr \"[A-Z]\" \"[a-z]\"<CR>", "generate uuid" },
+  -- git
+  ["<leader>g"] = { name = "+git" },
 }
 
 local control_mappings = {

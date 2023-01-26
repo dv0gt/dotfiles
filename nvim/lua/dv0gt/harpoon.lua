@@ -14,7 +14,7 @@ local opts = {
 
 local mappings = {
   name = "Harpoon",
-  ["<Leader>m"] = { ":lua require'harpoon.mark'.add_file()<CR>", "Harpoon mark file" },
+  ["<Leader>hm"] = { ":lua require'harpoon.mark'.add_file()<CR>", "Harpoon mark file" },
   ["<TAB>"] = { ":lua require'harpoon.ui'.nav_next()<CR>", "Harpoon move next file" },
   ["<S-TAB>"] = { ":lua require'harpoon.ui'.nav_prev()<CR>", "Harpoon move prev file" },
   ["<Leader>hp"] = { ":lua require'harpoon.ui'.toggle_quick_menu()<CR>", "Harpoon toggle ui" }
