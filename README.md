@@ -10,7 +10,5 @@ The `backup.sh` script copies all important config into this repository:
 Just run:
 
 ```Bash
-
 ./backup.sh
-
 ```
