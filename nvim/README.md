@@ -22,7 +22,7 @@ end
 
 If the language server itself provides the ability to disable formatting, create a custom setting in the [settings folder](./nvim/lua/fwiedmann/lsp/settings) and update the options for the server [here](.nvim/lua/fwiedmann/lsp/lsp-installer.lua).
 
-## LSP Servers
+## Language support 
 
 ### Java
 
@@ -57,6 +57,10 @@ sudo wget https://projectlombok.org/downloads/lombok.jar -O $HOME/.local/share/j
 ```
 
 Also use [google-java-format](https://github.com/google/google-java-format) for standard formatting.
+
+### Golang
+
+For golang debugger to work, you need to [install `delve`](https://github.com/go-delve/delve/blob/master/Documentation/installation/README.md) first and put it in your PATH.
 
 # Fonts
 

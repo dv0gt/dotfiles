@@ -26,8 +26,8 @@ local leader_mappings = {
   -- +debug
   ["<leader>d"] = { name = "+debug" },
   ["<Leader>db"] = { ":lua require'dap'.toggle_breakpoint()<cr>", "toggle breakpoint" },
-  ["<Leader>ds"] = { ":lua require'dap'.continue()<cr>", "continue" },
-  ["<Leader>dt"] = { ":lua require'dap'.toggle()<cr>", "ui" },
+  ["<Leader>ds"] = { ":lua require'dap'.continue()<cr>", "start/continue" },
+  ["<Leader>dt"] = { ":lua require'dapui'.toggle()<cr>", "ui" },
   ["<Leader>di"] = { ":lua require'dap'.step_into()<cr>", "step into" },
   ["<Leader>do"] = { ":lua require'dap'.step_over()<cr>", "step over" },
   -- +harpoon
