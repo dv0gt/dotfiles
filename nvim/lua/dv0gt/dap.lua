@@ -44,8 +44,6 @@ dap.configurations.java = {
 
 dap_ui.setup()
 
-vim.keymap.set('n', '<Leader>dt', ":lua require'dapui'.toggle()<cr>", { silent = true })
-
 vim.api.nvim_set_hl(0, 'DapBreakpoint', { fg = '#FF3131', ctermbg = 0 })
 vim.api.nvim_set_hl(0, 'DapBg', { bg = '#000000', ctermbg = 0 })
 vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DapBreakpoint', linehl = 'DapBg' })

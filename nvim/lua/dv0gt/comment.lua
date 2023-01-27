@@ -6,8 +6,8 @@ end
 comment.setup({
   toggler = {
     ---Line-comment toggle keymap
-    line = '<leader>cc',
+    line = 'gcc',
     ---Block-comment toggle keymap
-    block = '<leader>cb',
+    block = 'gcb',
   },
 })
