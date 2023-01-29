@@ -1,6 +1,5 @@
 require("dv0gt/packer")
 
-
 require('dv0gt/options')
 require('dv0gt/which-key')
 require("dv0gt/keybindings")
@@ -17,7 +16,6 @@ require('dv0gt/treesitter')
 require('dv0gt/lualine')
 require("dv0gt/lsp")
 require("dv0gt.indentline")
-require("dv0gt.alpha")
 require("dv0gt/colorizer")
 require("dv0gt/bufferline")
 require("dv0gt/lspsaga")

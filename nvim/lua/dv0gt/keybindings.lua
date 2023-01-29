@@ -22,6 +22,9 @@ local leader_mappings = {
   ["<Leader>ff"] = { ":Telescope find_files hidden=true<cr>", "find files in workspace" },
   ["<Leader>fg"] = { ":Telescope live_grep<cr>", "find in files in workspace" },
   ["<Leader>fb"] = { ":Telescope buffers<cr>", "show open buffers" },
+  ["<Leader>ft"] = { ":TodoLocList<cr>", "show todo list" },
+
+  -- explorer
   ["<Leader>e"] = { ":NvimTreeToggle<cr>", "Explorer" },
   -- +debug
   ["<leader>d"] = { name = "+debug" },
