@@ -36,7 +36,7 @@ null_ls.setup {
     -- formatting.google_java_format,
 
     diagnostics.eslint_d,
-    diagnostics.misspell,
+    -- diagnostics.misspell,
     diagnostics.markdownlint,
     diagnostics.revive
   },

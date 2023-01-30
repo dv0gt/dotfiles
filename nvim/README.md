@@ -62,6 +62,8 @@ Also use [google-java-format](https://github.com/google/google-java-format) for 
 
 For golang debugger to work, you need to [install `delve`](https://github.com/go-delve/delve/blob/master/Documentation/installation/README.md) first and put it in your PATH.
 
+For golang linter to work properly, install `revive` with the following command: `go install github.com/mgechev/revive@latest`
+
 # Fonts
 
 [JetBrains Mono Regular Nerd Font Complete ](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)
