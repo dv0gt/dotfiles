@@ -21,9 +21,9 @@ local leader_mappings = {
   ["<leader>f"] = { name = "+find" },
   ["<Leader>ff"] = { ":Telescope find_files hidden=true<cr>", "find files in workspace" },
   ["<Leader>fg"] = { ":Telescope live_grep<cr>", "find in files in workspace" },
-  ["<Leader>fb"] = { ":Telescope buffers<cr>", "show open buffers" },
   ["<Leader>ft"] = { ":TodoLocList<cr>", "show todo list" },
-
+  -- +buffers
+  ["<Leader>bb"] = { ":Telescope buffers<cr>", "show open buffers" },
   -- explorer
   ["<Leader>e"] = { ":NvimTreeToggle<cr>", "Explorer" },
   -- +debug
@@ -39,7 +39,7 @@ local leader_mappings = {
   ["<Leader>hp"] = { ":lua require'harpoon.ui'.toggle_quick_menu()<CR>", "Harpoon toggle ui" },
   -- +code
   ["<leader>c"] = { name = "+code" },
-  ["<Leader>cf"] = { ":lua vim.lsp.buf.formatting()<CR>", "Format" },
+  ["<Leader>cf"] = { ":lua vim.lsp.buf.format { async = true }<CR>", "Format" },
   ["<Leader>cr"] = { ":Lspsaga rename<CR>", "Rename" },
   ["<Leader>cd"] = { ":lua vim.lsp.buf.definition()<CR>", "Goto definition" },
   ["<Leader>cD"] = { ":lua vim.lsp.buf.declaration()<CR>", "Goto declaration" },
