@@ -58,6 +58,7 @@ local leader_mappings = {
   -- +git
   ["<leader>g"] = { name = "+git" },
   ["<Leader>gg"] = { ":lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+  ["<Leader>gc"] = { ":GitBlameCopySHA<CR>", "Copy commit url" },
   -- +window
   ["<leader>w"] = { name = "+window" },
   ["<leader>wv"] = { "<C-w>v<CR>", "Split →" },
