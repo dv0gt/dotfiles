@@ -23,3 +23,5 @@ vim.opt.spellsuggest = "10"
 vim.opt.cmdheight = 0
 
 vim.opt.termguicolors = true
+
+vim.opt.scrolloff = 20
