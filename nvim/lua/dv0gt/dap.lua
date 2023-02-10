@@ -31,12 +31,12 @@ dap.configurations.java = {
 
 dap_ui.setup()
 
-vim.api.nvim_set_hl(0, 'DapBreakpoint', { fg = '#FF3131', ctermbg = 0 })
-vim.api.nvim_set_hl(0, 'DapBreakpointBg', { bg = '#FF3131', ctermbg = 0 })
+vim.api.nvim_set_hl(0, 'DapBreakpoint', { fg = '#9d2f03', ctermbg = 0 })
+vim.api.nvim_set_hl(0, 'DapBreakpointBg', { bg = '#9d2f03', ctermbg = 0 })
 vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DapBreakpoint', linehl = 'DapBreakpointBg' })
 
-vim.api.nvim_set_hl(0, 'DapStopped', { fg = '#0FFF50', ctermbg = 0 })
-vim.api.nvim_set_hl(0, 'DapStoppedBg', { bg = '#0FFF50', ctermbg = 0 })
+vim.api.nvim_set_hl(0, 'DapStopped', { fg = '#e5e500', ctermbg = 0 })
+vim.api.nvim_set_hl(0, 'DapStoppedBg', { bg = '#e5e500', ctermbg = 0 })
 vim.fn.sign_define('DapStopped', { text = '', texthl = 'DapStopped', linehl = 'DapStoppedBg' })
 
 -- dap.listeners.after.event_initialized["dapui_config"] = function()

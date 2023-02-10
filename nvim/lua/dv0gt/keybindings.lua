@@ -1,6 +1,8 @@
 vim.g.mapleader = " "
 
 vim.keymap.set('n', 'x', '"_x', { silent = true })
+vim.keymap.set('n', '<leader>o', ':<C-u>call append(line("."), "")<CR>', { silent = true })
+vim.keymap.set('n', '<leader>O', ':<C-u>call append(line(".")-1, "")<CR>', { silent = true })
 
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
@@ -23,7 +25,9 @@ local leader_mappings = {
   ["<Leader>fg"] = { ":Telescope live_grep<cr>", "find in files in workspace" },
   ["<Leader>ft"] = { ":TodoLocList<cr>", "show todo list" },
   -- +buffers
+  ["<Leader>b"] = { name = "+buffer" },
   ["<Leader>bb"] = { ":Telescope buffers<cr>", "show open buffers" },
+  ["<Leader>bd"] = { ":bd<cr>", "delete single buffer" },
   -- explorer
   ["<Leader>e"] = { ":NvimTreeToggle<cr>", "Explorer" },
   -- +debug
@@ -54,6 +58,7 @@ local leader_mappings = {
   ["<Leader>is"] = { ":Lspsaga signature_help<CR>", "Signature help" },
   -- +util
   ["<leader>u"] = { name = "+util" },
+
   ["<Leader>uu"] = { ":r !uuidgen|tr \"[A-Z]\" \"[a-z]\"<CR>", "Generate uuid" },
   -- +git
   ["<leader>g"] = { name = "+git" },
