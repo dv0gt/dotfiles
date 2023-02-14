@@ -1,8 +1,8 @@
 vim.g.mapleader = " "
 
 vim.keymap.set('n', 'x', '"_x', { silent = true })
-vim.keymap.set('n', '<leader>o', ':<C-u>call append(line("."), "")<CR>', { silent = true })
-vim.keymap.set('n', '<leader>O', ':<C-u>call append(line(".")-1, "")<CR>', { silent = true })
+vim.keymap.set('n', '<A-o>', ':<C-u>call append(line("."), "")<CR>', { silent = true })
+vim.keymap.set('n', '<A-O>', ':<C-u>call append(line(".")-1, "")<CR>', { silent = true })
 
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
@@ -63,7 +63,8 @@ local leader_mappings = {
   -- +git
   ["<leader>g"] = { name = "+git" },
   ["<Leader>gg"] = { ":lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
-  ["<Leader>gc"] = { ":GitBlameCopySHA<CR>", "Copy commit url" },
+  ["<Leader>gc"] = { ":GitBlameCopySHA<CR>", "Copy commit sha" },
+  ["<Leader>gu"] = { ":GitBlameCopyCommitURL<CR>", "Copy commit url" },
   -- +window
   ["<leader>w"] = { name = "+window" },
   ["<leader>wv"] = { "<C-w>v<CR>", "Split →" },
