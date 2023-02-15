@@ -25,3 +25,9 @@ vim.opt.cmdheight = 0
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 20
+
+-- git-blame settings
+vim.g.gitblame_enabled = 1
+vim.g.gitblame_display_virtual_text = 0
+vim.g.gitblame_date_format = "%r"
+vim.g.gitblame_message_template = "<summary> • <committer-date> • <committer>"
