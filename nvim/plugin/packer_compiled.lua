@@ -264,11 +264,6 @@ _G.packer_plugins = {
     path = "/home/dominik/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
     url = "https://github.com/rcarriga/nvim-dap-ui"
   },
-  ["nvim-dap-vscode-js"] = {
-    loaded = true,
-    path = "/home/dominik/.local/share/nvim/site/pack/packer/start/nvim-dap-vscode-js",
-    url = "https://github.com/mxsdev/nvim-dap-vscode-js"
-  },
   ["nvim-jdtls"] = {
     loaded = true,
     path = "/home/dominik/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
@@ -337,7 +332,7 @@ _G.packer_plugins = {
   ["rest.nvim"] = {
     loaded = true,
     path = "/home/dominik/.local/share/nvim/site/pack/packer/start/rest.nvim",
-    url = "https://github.com/NTBBloodbath/rest.nvim"
+    url = "https://github.com/rest-nvim/rest.nvim"
   },
   ["silicon.nvim"] = {
     loaded = true,
@@ -389,12 +384,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dominik/.local/share/nvim/site/pack/packer/start/vim-test",
     url = "https://github.com/vim-test/vim-test"
-  },
-  ["vscode-js-debug"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/dominik/.local/share/nvim/site/pack/packer/opt/vscode-js-debug",
-    url = "https://github.com/microsoft/vscode-js-debug"
   },
   ["which-key.nvim"] = {
     loaded = true,

@@ -49,6 +49,7 @@ local leader_mappings = {
   ["<Leader>cD"] = { ":lua vim.lsp.buf.declaration()<CR>", "Goto declaration" },
   ["<Leader>ci"] = { ":lua vim.lsp.buf.implementation()<CR>", "Goto impl" },
   ["<Leader>cR"] = { ":lua vim.lsp.buf.references()<CR>", "Find references" },
+  ["<Leader>cm"] = { ":MarkdownPreview<CR>", "Markdown preview" },
   -- +diagnostics
   ["<leader>i"] = { name = "+diagnostics" },
   ["<Leader>ik"] = { ":lua vim.diagnostic.goto_next({buffer=0})<CR>", "Goto previous" },

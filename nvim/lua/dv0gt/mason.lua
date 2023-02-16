@@ -11,8 +11,9 @@ end
 mason.setup()
 mason_lspconfig.setup(
   {
-    ensure_installed = { "angularls",
-      "sumneko_lua",
+    ensure_installed = { 
+      "angularls",
+      "lua_ls",
       "cssls",
       "html",
       "tsserver",
@@ -23,6 +24,7 @@ mason_lspconfig.setup(
       "jdtls",
       "yamlls",
       "kotlin_language_server",
-      "marksman" }
+      "marksman" 
+    }
   }
 )
