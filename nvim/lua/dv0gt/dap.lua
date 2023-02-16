@@ -31,8 +31,8 @@ dap.configurations.java = {
 
 dap_ui.setup()
 
-vim.api.nvim_set_hl(0, 'DapBreakpoint', { fg = '#9d2f03', ctermbg = 0 })
-vim.api.nvim_set_hl(0, 'DapBreakpointBg', { bg = '#9d2f03', ctermbg = 0 })
+vim.api.nvim_set_hl(0, 'DapBreakpoint', { fg = '#004c99', ctermbg = 0 })
+vim.api.nvim_set_hl(0, 'DapBreakpointBg', { bg = '#004c99', ctermbg = 0 })
 vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DapBreakpoint', linehl = 'DapBreakpointBg' })
 
 vim.api.nvim_set_hl(0, 'DapStopped', { fg = '#e5e500', ctermbg = 0 })
