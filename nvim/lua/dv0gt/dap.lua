@@ -35,8 +35,8 @@ vim.api.nvim_set_hl(0, 'DapBreakpoint', { fg = '#004c99', ctermbg = 0 })
 vim.api.nvim_set_hl(0, 'DapBreakpointBg', { bg = '#004c99', ctermbg = 0 })
 vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DapBreakpoint', linehl = 'DapBreakpointBg' })
 
-vim.api.nvim_set_hl(0, 'DapStopped', { fg = '#e5e500', ctermbg = 0 })
-vim.api.nvim_set_hl(0, 'DapStoppedBg', { bg = '#e5e500', ctermbg = 0 })
+vim.api.nvim_set_hl(0, 'DapStopped', { fg = '#ffffb0', ctermbg = 0 })
+vim.api.nvim_set_hl(0, 'DapStoppedBg', { bg = '#ffffb0', ctermbg = 0 })
 vim.fn.sign_define('DapStopped', { text = '', texthl = 'DapStopped', linehl = 'DapStoppedBg' })
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
