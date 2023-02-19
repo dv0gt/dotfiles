@@ -19,3 +19,6 @@ Just run:
 
 ```
 
+## restore
+
+Restore all files by executing `restore.sh`.
