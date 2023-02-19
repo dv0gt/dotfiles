@@ -11,7 +11,7 @@ Then call `nvim` somewhere. On first startup there might be some installations r
 ## Disable LS Formatters
 
 When two language servers trying to apply formatting neovim asks to choose one.
-To disable a language server for formatting go to the [handlers](./nvim/lua/fwiedmann/lsp/handlers.lua).
+To disable a language server for formatting go to the [handlers](./nvim/lua/dv0gt/lsp/handlers.lua).
 In the on_attach method you can check for the specific client and disable the formatting:
 
 ```lua
@@ -20,7 +20,7 @@ client.resolved_capabilities.document_formatting = false
 end
 ```
 
-If the language server itself provides the ability to disable formatting, create a custom setting in the [settings folder](./nvim/lua/fwiedmann/lsp/settings) and update the options for the server [here](.nvim/lua/fwiedmann/lsp/lsp-installer.lua).
+If the language server itself provides the ability to disable formatting, create a custom setting in the [settings folder](./nvim/lua/dv0gt/lsp/settings) and update the options for the server [here](.nvim/lua/dv0gt/lsp/lsp-installer.lua).
 
 ## Language support 
 
