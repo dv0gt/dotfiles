@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-lspsaga.setup {
+lspsaga.setup({
   lightbulb = {
     enable = true,
     enable_in_insert = false,
@@ -11,4 +11,4 @@ lspsaga.setup {
     sign_priority = 40,
     virtual_text = false,
   },
-}
+})

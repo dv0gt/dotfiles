@@ -11,12 +11,12 @@ local diagnostics = null_ls.builtins.diagnostics
 local completion = null_ls.builtins.completion
 local augroup = require("dv0gt.lsp.format_group")
 -- https://github.com/prettier-solidity/prettier-plugin-solidity
-null_ls.setup {
+null_ls.setup({
   debug = false,
   sources = {
     completion.spell,
     formatting.eslint_d,
-    formatting.prettier.with {
+    formatting.prettier.with({
       filetypes = {
         "javascript",
         "javascriptreact",
@@ -32,7 +32,7 @@ null_ls.setup {
         "graphql",
         "handlebars",
       },
-    },
+    }),
     -- formatting.google_java_format,
 
     diagnostics.eslint_d,
@@ -52,4 +52,4 @@ null_ls.setup {
   --     })
   --   end
   -- end,
-}
+})

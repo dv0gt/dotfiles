@@ -3,3 +3,6 @@ repos:
     rev: v0.16.1
     hooks:
       - id: stylua-github
+        always_run: true
+        args:
+          - "./nvim/"

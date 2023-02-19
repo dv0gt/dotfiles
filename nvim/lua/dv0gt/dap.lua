@@ -3,12 +3,10 @@ if not dap_status_ok then
   return
 end
 
-
 local status_ok, dap_go = pcall(require, "dap-go")
 if not status_ok then
   return
 end
-
 
 local ui_status_ok, dap_ui = pcall(require, "dapui")
 if not ui_status_ok then
@@ -21,23 +19,23 @@ dap_go.setup()
 -- java debugger
 dap.configurations.java = {
   {
-    type = 'java';
-    request = 'attach';
-    name = "Debug (Attach) - Remote";
-    hostName = "127.0.0.1";
-    port = 5005;
+    type = "java",
+    request = "attach",
+    name = "Debug (Attach) - Remote",
+    hostName = "127.0.0.1",
+    port = 5005,
   },
 }
 
 dap_ui.setup()
 
-vim.api.nvim_set_hl(0, 'DapBreakpoint', { fg = '#004c99', ctermbg = 0 })
-vim.api.nvim_set_hl(0, 'DapBreakpointBg', { bg = '#004c99', ctermbg = 0 })
-vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DapBreakpoint', linehl = 'DapBreakpointBg' })
+vim.api.nvim_set_hl(0, "DapBreakpoint", { fg = "#004c99", ctermbg = 0 })
+vim.api.nvim_set_hl(0, "DapBreakpointBg", { bg = "#004c99", ctermbg = 0 })
+vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DapBreakpoint", linehl = "DapBreakpointBg" })
 
-vim.api.nvim_set_hl(0, 'DapStopped', { fg = '#ffffb0', ctermbg = 0 })
-vim.api.nvim_set_hl(0, 'DapStoppedBg', { bg = '#ffffb0', ctermbg = 0 })
-vim.fn.sign_define('DapStopped', { text = '', texthl = 'DapStopped', linehl = 'DapStoppedBg' })
+vim.api.nvim_set_hl(0, "DapStopped", { fg = "#ffffb0", ctermbg = 0 })
+vim.api.nvim_set_hl(0, "DapStoppedBg", { bg = "#ffffb0", ctermbg = 0 })
+vim.fn.sign_define("DapStopped", { text = "", texthl = "DapStopped", linehl = "DapStoppedBg" })
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
   dap_ui.open()

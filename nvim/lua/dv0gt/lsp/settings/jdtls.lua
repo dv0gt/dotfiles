@@ -1,3 +1,3 @@
 return {
-  use_lombok_agent = true
+  use_lombok_agent = true,
 }

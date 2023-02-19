@@ -70,7 +70,6 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
-
   if client.name == "tsserver" then
     client.server_capabilities.document_formatting = false
   end
@@ -83,7 +82,7 @@ M.on_attach = function(client, bufnr)
   end
 
   if client.name == "jdtls" then
-    require('jdtls').setup_dap({ hotcodereplace = 'auto' })
+    require("jdtls").setup_dap({ hotcodereplace = "auto" })
     require("jdtls.setup").add_commands()
     vim.lsp.codelens.refresh()
   end

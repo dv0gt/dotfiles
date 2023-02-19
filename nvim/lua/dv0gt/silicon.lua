@@ -4,6 +4,6 @@ if not status_ok then
 end
 
 silicon.setup({
-  font = 'Hack Nerd Font Mono',
-  theme = 'Monokai Extended',
+  font = "Hack Nerd Font Mono",
+  theme = "Monokai Extended",
 })

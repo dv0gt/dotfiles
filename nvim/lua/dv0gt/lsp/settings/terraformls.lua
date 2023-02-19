@@ -1,5 +1,6 @@
 return {
   filetypes = {
-    "terraform", "hcl"
-  }
+    "terraform",
+    "hcl",
+  },
 }

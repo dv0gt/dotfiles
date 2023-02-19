@@ -20,6 +20,6 @@ transparent.setup({
     "BufferLineIndicatorSelected",
   },
   exclude = {
-    "NonText"
+    "NonText",
   }, -- table: groups you don't want to clear
 })

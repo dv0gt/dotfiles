@@ -8,9 +8,10 @@ if not snip_status_ok then
   return
 end
 
-require("luasnip/loaders/from_vscode").load({ paths = { "~/.local/share/nvim/site/pack/packer/start/friendly-snippets" } })
+require("luasnip/loaders/from_vscode").load({
+  paths = { "~/.local/share/nvim/site/pack/packer/start/friendly-snippets" },
+})
 require("luasnip/loaders/from_vscode").lazy_load()
-
 
 local check_backspace = function()
   local col = vim.fn.col(".") - 1
@@ -116,9 +117,9 @@ cmp.setup({
     { name = "luasnip", priority = 9 },
     { name = "buffer" },
     { name = "path", priority = 8 },
-    { name = 'nvim_lsp_signature_help' },
+    { name = "nvim_lsp_signature_help" },
     {
-      name = 'spell',
+      name = "spell",
       priority = 7,
       option = {
         keep_all_entries = false,

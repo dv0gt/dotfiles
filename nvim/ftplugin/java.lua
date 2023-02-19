@@ -20,15 +20,15 @@ if not status then
 end
 
 -- Determine OS
-local home = os.getenv "HOME"
-if vim.fn.has "mac" == 1 then
+local home = os.getenv("HOME")
+if vim.fn.has("mac") == 1 then
   WORKSPACE_PATH = home .. "/workspace/"
   CONFIG = "mac"
-elseif vim.fn.has "unix" == 1 then
+elseif vim.fn.has("unix") == 1 then
   WORKSPACE_PATH = home .. "/workspace/"
   CONFIG = "linux"
 else
-  print "Unsupported system"
+  print("Unsupported system")
 end
 
 -- Find root of project
@@ -50,14 +50,16 @@ JAVA_DAP_ACTIVE = true
 local bundles = {}
 
 if JAVA_DAP_ACTIVE then
-  vim.list_extend(bundles,
-    vim.split(vim.fn.glob(home .. "/git/github.com/microsoft/vscode-java-test/server/*.jar"), "\n"))
+  vim.list_extend(
+    bundles,
+    vim.split(vim.fn.glob(home .. "/git/github.com/microsoft/vscode-java-test/server/*.jar"), "\n")
+  )
   vim.list_extend(
     bundles,
     vim.split(
       vim.fn.glob(
-        home ..
-        "/git/github.com/microsoft/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar"
+        home
+          .. "/git/github.com/microsoft/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar"
       ),
       "\n"
     )
@@ -122,7 +124,7 @@ local config = {
   settings = {
     java = {
       saveActions = {
-        organizeImports = true
+        organizeImports = true,
       },
       cleanup = {
         actionsOnSave = {
@@ -134,7 +136,7 @@ local config = {
           "addFinalModifier",
           "lambdaExpression",
           "addDeprecated",
-        }
+        },
       },
       -- jdt = {
       --   ls = {
@@ -220,13 +222,16 @@ local config = {
 -- or attaches to an existing client & server depending on the `root_dir`.
 jdtls.start_or_attach(config)
 
-
-vim.cmd "command! -buffer -nargs=? -complete=custom,v:lua.require'jdtls'._complete_compile JdtCompile lua require('jdtls').compile(<f-args>)"
-vim.cmd "command! -buffer -nargs=? -complete=custom,v:lua.require'jdtls'._complete_set_runtime JdtSetRuntime lua require('jdtls').set_runtime(<f-args>)"
-vim.cmd "command! -buffer JdtUpdateConfig lua require('jdtls').update_project_config()"
-vim.cmd "command! -buffer JdtJol lua require('jdtls').jol()"
-vim.cmd "command! -buffer JdtBytecode lua require('jdtls').javap()"
-vim.cmd "command! -buffer JdtJshell lua require('jdtls').jshell()"
+vim.cmd(
+  "command! -buffer -nargs=? -complete=custom,v:lua.require'jdtls'._complete_compile JdtCompile lua require('jdtls').compile(<f-args>)"
+)
+vim.cmd(
+  "command! -buffer -nargs=? -complete=custom,v:lua.require'jdtls'._complete_set_runtime JdtSetRuntime lua require('jdtls').set_runtime(<f-args>)"
+)
+vim.cmd("command! -buffer JdtUpdateConfig lua require('jdtls').update_project_config()")
+vim.cmd("command! -buffer JdtJol lua require('jdtls').jol()")
+vim.cmd("command! -buffer JdtBytecode lua require('jdtls').javap()")
+vim.cmd("command! -buffer JdtJshell lua require('jdtls').jshell()")
 
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
@@ -245,7 +250,7 @@ local opts = {
 local mappings = {
   name = "Java",
   ["<Leader>tn"] = { ":lua require'jdtls'.test_nearest_method()<CR>", "Run nearest method" },
-  ["<Leader>tc"] = { ":lua require'jdtls'.test_class()<CR>", "Run test class" }
+  ["<Leader>tc"] = { ":lua require'jdtls'.test_class()<CR>", "Run test class" },
 }
 
 which_key.register(mappings, opts)

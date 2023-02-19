@@ -10,7 +10,7 @@ end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
-nvim_tree.setup {
+nvim_tree.setup({
   auto_reload_on_write = true,
   open_on_tab = false,
   update_focused_file = {
@@ -19,7 +19,7 @@ nvim_tree.setup {
   },
 
   git = {
-    ignore = false
+    ignore = false,
   },
 
   view = {
@@ -27,8 +27,8 @@ nvim_tree.setup {
     mappings = {
       list = {
         { key = "<S-k>", action = "toggle_file_info" },
-      }
-    }
+      },
+    },
   },
   renderer = {
     group_empty = true,
@@ -69,4 +69,4 @@ nvim_tree.setup {
       error = "",
     },
   },
-}
+})

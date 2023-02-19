@@ -3,6 +3,6 @@ if not status_ok then
   return
 end
 
-require "dv0gt.lsp.lsp-installer"
+require("dv0gt.lsp.lsp-installer")
 require("dv0gt.lsp.handlers").setup()
-require "dv0gt.lsp.null-ls"
+require("dv0gt.lsp.null-ls")
