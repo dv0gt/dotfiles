@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 
 vim.keymap.set("n", "x", '"_x', { silent = true })
+vim.keymap.set("v", "p", "P", { silent = true }) -- capital P does not yank selection, make this the default behavior
 vim.keymap.set("n", "<A-o>", ':<C-u>call append(line("."), "")<CR>', { silent = true })
 vim.keymap.set("n", "<A-O>", ':<C-u>call append(line(".")-1, "")<CR>', { silent = true })
 
@@ -28,6 +29,7 @@ local leader_mappings = {
   ["<Leader>b"] = { name = "+buffer" },
   ["<Leader>bb"] = { ":Telescope buffers<cr>", "show open buffers" },
   ["<Leader>bd"] = { ":bd<cr>", "delete single buffer" },
+  ["<Leader>ba"] = { ":%bd|e#|bd#<cr>", "delete all buffers but this" },
   -- explorer
   ["<Leader>e"] = { ":NvimTreeToggle<cr>", "Explorer" },
   -- rest

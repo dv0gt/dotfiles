@@ -24,7 +24,7 @@ vim.opt.cmdheight = 0
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 20
+vim.opt.scrolloff = 8
 
 -- git-blame settings
 vim.g.gitblame_enabled = 1
