@@ -1,6 +1,6 @@
 # Installation
 
-First, run `nvim PackerInstall`.
+First, run `nvim +PackerInstall`.
 
 Then call `nvim` somewhere. On first startup there might be some installations required (e.g. Treesitter). This will happen automatically. 
 
