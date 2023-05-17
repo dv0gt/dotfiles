@@ -109,8 +109,9 @@ source $ZSH/oh-my-zsh.sh
 
 source <(kubectl completion zsh)
 alias k='kubectl'
-alias lz='lazygit'
-alias kx='kubectx'
+alias lazy='lazygit'
+alias ctx='kubectx'
+alias ns='kubens'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
