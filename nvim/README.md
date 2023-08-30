@@ -4,6 +4,12 @@ First, run `nvim PackerInstall`.
 
 Then call `nvim` somewhere. On first startup there might be some installations required (e.g. Treesitter). This will happen automatically. 
 
+## Update
+
+If you want to update nvim and its dependencies, run `:PackerSync`, followed by `:TSUpdate`.
+
+Probably you need to do some config changes as there might be breaking changes or something.
+
 ### Golang
 
 For golang debugger to work, you need to install `delve` first and put it in your PATH.
