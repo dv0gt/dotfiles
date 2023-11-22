@@ -40,7 +40,11 @@ return require("packer").startup(function(use)
   use("ahmedkhalf/project.nvim")
   use("nvim-lua/plenary.nvim")
 
-  use("lukas-reineke/indent-blankline.nvim")
+  use({"lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {
+        char = '┊',
+        show_trailing_blankline_indent = false,
+      }
+    })
 
   use("kyazdani42/nvim-web-devicons")
 
