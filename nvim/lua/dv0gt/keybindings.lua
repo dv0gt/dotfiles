@@ -32,11 +32,6 @@ local leader_mappings = {
   ["<Leader>ba"] = { ":%bd|e#|bd#<cr>", "delete all buffers but this" },
   -- explorer
   ["<Leader>e"] = { ":NvimTreeToggle<cr>", "Explorer" },
-  -- rest
-  ["<Leader>r"] = { name = "+rest" },
-  ["<Leader>rr"] = { "<Plug>RestNvim", "Run HTTP request at current cursor" },
-  ["<Leader>rl"] = { "<Plug>RestNvimLast", "Run last HTTP request" },
-  ["<Leader>rs"] = { "<Plug>RestNvimPreview", "Show curl preview of request" },
   -- +debug
   ["<leader>d"] = { name = "+debug" },
   ["<Leader>db"] = { ":lua require'dap'.toggle_breakpoint()<cr>", "toggle breakpoint" },

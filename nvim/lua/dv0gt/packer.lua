@@ -104,8 +104,6 @@ return require("packer").startup(function(use)
 
   use({ "folke/which-key.nvim" })
   use({ "ThePrimeagen/harpoon" })
-  use({ "krivahtoo/silicon.nvim", run = "./install.sh" })
-  use({ "rest-nvim/rest.nvim", requires = { "nvim-lua/plenary.nvim" } })
 
   use("folke/todo-comments.nvim")
   use("xiyaowong/nvim-transparent")
