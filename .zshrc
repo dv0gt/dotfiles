@@ -112,6 +112,7 @@ alias k='kubectl'
 alias lazy='lazygit'
 alias ctx='kubectx'
 alias ns='kubens'
+alias git='LANG=en_GB git'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

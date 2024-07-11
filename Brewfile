@@ -2,6 +2,7 @@ tap "homebrew/bundle"
 tap "azure/kubelogin"
 tap "mongodb/brew"
 
+brew "git"
 brew "wget"
 brew "kubectl"
 brew "fzf"
