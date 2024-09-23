@@ -13,9 +13,9 @@ local opts = {
 }
 
 local mappings = {
-  name = "Harpoon",
-  ["<TAB>"] = { ":lua require'harpoon.ui'.nav_next()<CR>", "Harpoon move next file" },
-  ["<S-TAB>"] = { ":lua require'harpoon.ui'.nav_prev()<CR>", "Harpoon move prev file" },
+    { "", group = "Harpoon", nowait = true, remap = false },
+    { "<S-TAB>", ":lua require'harpoon.ui'.nav_prev()<CR>", desc = "Harpoon move prev file", nowait = true, remap = false },
+    { "<TAB>", ":lua require'harpoon.ui'.nav_next()<CR>", desc = "Harpoon move next file", nowait = true, remap = false },
 }
 
-which_key.register(mappings, opts)
+which_key.add(mappings, opts)

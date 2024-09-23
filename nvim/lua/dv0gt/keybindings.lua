@@ -19,88 +19,76 @@ local opts = {
   nowait = true, -- use `nowait` when creating keymaps
 }
 local leader_mappings = {
-  name = "Global Leader",
-  -- +find
-  ["<leader>f"] = { name = "+find" },
-  ["<Leader>ff"] = { ":Telescope find_files hidden=true<cr>", "find files in workspace" },
-  ["<Leader>fg"] = { ":Telescope live_grep<cr>", "find in files in workspace" },
-  ["<Leader>ft"] = { ":TodoLocList<cr>", "show todo list" },
-  -- +buffers
-  ["<Leader>b"] = { name = "+buffer" },
-  ["<Leader>bb"] = { ":Telescope buffers<cr>", "show open buffers" },
-  ["<Leader>bd"] = { ":bd<cr>", "delete single buffer" },
-  ["<Leader>ba"] = { ":%bd|e#|bd#<cr>", "delete all buffers but this" },
-  -- explorer
-  ["<Leader>e"] = { ":NvimTreeToggle<cr>", "Explorer" },
-  -- +debug
-  ["<leader>d"] = { name = "+debug" },
-  ["<Leader>db"] = { ":lua require'dap'.toggle_breakpoint()<cr>", "toggle breakpoint" },
-  ["<Leader>ds"] = { ":lua require'dap'.continue()<cr>", "start/continue" },
-  ["<Leader>dt"] = { ":lua require'dapui'.toggle()<cr>", "ui" },
-  ["<Leader>di"] = { ":lua require'dap'.step_into()<cr>", "step into" },
-  ["<Leader>do"] = { ":lua require'dap'.step_over()<cr>", "step over" },
-  -- +harpoon
-  ["<leader>h"] = { name = "+harpoon" },
-  ["<Leader>hm"] = { ":lua require'harpoon.mark'.add_file()<CR>", "Harpoon mark file" },
-  ["<Leader>hp"] = { ":lua require'harpoon.ui'.toggle_quick_menu()<CR>", "Harpoon toggle ui" },
-  -- +code
-  ["<leader>c"] = { name = "+code" },
-  ["<Leader>cf"] = { ":lua vim.lsp.buf.format { async = true }<CR>", "Format" },
-  ["<Leader>cr"] = { ":Lspsaga rename<CR>", "Rename" },
-  ["<Leader>cd"] = { ":lua vim.lsp.buf.definition()<CR>", "Goto definition" },
-  ["<Leader>cD"] = { ":lua vim.lsp.buf.declaration()<CR>", "Goto declaration" },
-  ["<Leader>ci"] = { ":lua vim.lsp.buf.implementation()<CR>", "Goto impl" },
-  ["<Leader>cR"] = { ":lua vim.lsp.buf.references()<CR>", "Find references" },
-  ["<Leader>cm"] = { ":MarkdownPreview<CR>", "Markdown preview" },
-  -- +diagnostics
-  ["<leader>i"] = { name = "+diagnostics" },
-  ["<Leader>ik"] = { ":lua vim.diagnostic.goto_next({buffer=0})<CR>", "Goto previous" },
-  ["<Leader>ij"] = { ":lua vim.diagnostic.goto_prev({buffer=0})<CR>", "Goto next" },
-  ["<Leader>ih"] = { ":Lspsaga show_line_diagnostics<CR>", "Show line diagnostics" },
-  ["<Leader>ia"] = { ":Lspsaga code_action<CR>", "Code action" },
-  ["<Leader>is"] = { ":Lspsaga signature_help<CR>", "Signature help" },
-  -- +util
-  ["<leader>u"] = { name = "+util" },
-
-  ["<Leader>uu"] = { ':r !uuidgen|tr "[A-Z]" "[a-z]"<CR>', "Generate uuid" },
-  -- +git
-  ["<leader>g"] = { name = "+git" },
-  ["<Leader>gg"] = { ":lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
-  ["<Leader>gc"] = { ":GitBlameCopySHA<CR>", "Copy commit sha" },
-  ["<Leader>gu"] = { ":GitBlameCopyCommitURL<CR>", "Copy commit url" },
-  -- +window
-  ["<leader>w"] = { name = "+window" },
-  ["<leader>wv"] = { "<C-w>v<CR>", "Split →" },
-  ["<leader>wh"] = { "<C-w>s<CR>", "Split ↓" },
-  -- +test
-  ["<Leader>t"] = { name = "+test" },
+     { "", group = "Global Leader", nowait = true, remap = false },
+     { "<Leader>b", group = "buffer", nowait = true, remap = false },
+     { "<Leader>ba", ":%bd|e#|bd#<cr>", desc = "delete all buffers but this", nowait = true, remap = false },
+     { "<Leader>bb", ":Telescope buffers<cr>", desc = "show open buffers", nowait = true, remap = false },
+     { "<Leader>bd", ":bd<cr>", desc = "delete single buffer", nowait = true, remap = false },
+     { "<Leader>cD", ":lua vim.lsp.buf.declaration()<CR>", desc = "Goto declaration", nowait = true, remap = false },
+     { "<Leader>cR", ":lua vim.lsp.buf.references()<CR>", desc = "Find references", nowait = true, remap = false },
+     { "<Leader>cd", ":lua vim.lsp.buf.definition()<CR>", desc = "Goto definition", nowait = true, remap = false },
+     { "<Leader>cf", ":lua vim.lsp.buf.format { async = true }<CR>", desc = "Format", nowait = true, remap = false },
+     { "<Leader>ci", ":lua vim.lsp.buf.implementation()<CR>", desc = "Goto impl", nowait = true, remap = false },
+     { "<Leader>cm", ":MarkdownPreview<CR>", desc = "Markdown preview", nowait = true, remap = false },
+     { "<Leader>cr", ":Lspsaga rename<CR>", desc = "Rename", nowait = true, remap = false },
+     { "<Leader>db", ":lua require'dap'.toggle_breakpoint()<cr>", desc = "toggle breakpoint", nowait = true, remap = false },
+     { "<Leader>di", ":lua require'dap'.step_into()<cr>", desc = "step into", nowait = true, remap = false },
+     { "<Leader>do", ":lua require'dap'.step_over()<cr>", desc = "step over", nowait = true, remap = false },
+     { "<Leader>ds", ":lua require'dap'.continue()<cr>", desc = "start/continue", nowait = true, remap = false },
+     { "<Leader>dt", ":lua require'dapui'.toggle()<cr>", desc = "ui", nowait = true, remap = false },
+     { "<Leader>e", ":NvimTreeToggle<cr>", desc = "Explorer", nowait = true, remap = false },
+     { "<Leader>ff", ":Telescope find_files hidden=true<cr>", desc = "find files in workspace", nowait = true, remap = false },
+     { "<Leader>fg", ":Telescope live_grep<cr>", desc = "find in files in workspace", nowait = true, remap = false },
+     { "<Leader>ft", ":TodoLocList<cr>", desc = "show todo list", nowait = true, remap = false },
+     { "<Leader>gc", ":GitBlameCopySHA<CR>", desc = "Copy commit sha", nowait = true, remap = false },
+     { "<Leader>gg", ":lua _LAZYGIT_TOGGLE()<CR>", desc = "Lazygit", nowait = true, remap = false },
+     { "<Leader>gu", ":GitBlameCopyCommitURL<CR>", desc = "Copy commit url", nowait = true, remap = false },
+     { "<Leader>hm", ":lua require'harpoon.mark'.add_file()<CR>", desc = "Harpoon mark file", nowait = true, remap = false },
+     { "<Leader>hp", ":lua require'harpoon.ui'.toggle_quick_menu()<CR>", desc = "Harpoon toggle ui", nowait = true, remap = false },
+     { "<Leader>ia", ":Lspsaga code_action<CR>", desc = "Code action", nowait = true, remap = false },
+     { "<Leader>ih", ":Lspsaga show_line_diagnostics<CR>", desc = "Show line diagnostics", nowait = true, remap = false },
+     { "<Leader>ij", ":lua vim.diagnostic.goto_prev({buffer=0})<CR>", desc = "Goto next", nowait = true, remap = false },
+     { "<Leader>ik", ":lua vim.diagnostic.goto_next({buffer=0})<CR>", desc = "Goto previous", nowait = true, remap = false },
+     { "<Leader>is", ":Lspsaga signature_help<CR>", desc = "Signature help", nowait = true, remap = false },
+     { "<Leader>t", group = "test", nowait = true, remap = false },
+     { "<Leader>uu", ':r !uuidgen|tr "[A-Z]" "[a-z]"<CR>', desc = "Generate uuid", nowait = true, remap = false },
+     { "<leader>c", group = "code", nowait = true, remap = false },
+     { "<leader>d", group = "debug", nowait = true, remap = false },
+     { "<leader>f", group = "find", nowait = true, remap = false },
+     { "<leader>g", group = "git", nowait = true, remap = false },
+     { "<leader>h", group = "harpoon", nowait = true, remap = false },
+     { "<leader>i", group = "diagnostics", nowait = true, remap = false },
+     { "<leader>u", group = "util", nowait = true, remap = false },
+     { "<leader>w", group = "window", nowait = true, remap = false },
+     { "<leader>wh", "<C-w>s<CR>", desc = "Split ↓", nowait = true, remap = false },
+     { "<leader>wv", "<C-w>v<CR>", desc = "Split →", nowait = true, remap = false },
 }
 
 local control_mappings = {
-  name = "Global Control",
-  ["<C-c>"] = { "ESC", "escape bind" },
-  ["<C-k>"] = { ":wincmd k<cr>", "move buffer focus up" },
-  ["<C-j>"] = { ":wincmd j<cr>", "move buffer focus down" },
-  ["<C-h>"] = { ":wincmd h<cr>", "move buffer focus left" },
-  ["<C-l>"] = { ":wincmd l<cr>", "move buffer focus right" },
+    { "", group = "Global Control", nowait = true, remap = false },
+    { "<C-c>", "ESC", desc = "escape bind", nowait = true, remap = false },
+    { "<C-h>", ":wincmd h<cr>", desc = "move buffer focus left", nowait = true, remap = false },
+    { "<C-j>", ":wincmd j<cr>", desc = "move buffer focus down", nowait = true, remap = false },
+    { "<C-k>", ":wincmd k<cr>", desc = "move buffer focus up", nowait = true, remap = false },
+    { "<C-l>", ":wincmd l<cr>", desc = "move buffer focus right", nowait = true, remap = false },
 }
 
 local shift_mappings = {
-  name = "Global shift",
-  ["<S-h>"] = { ":bp<CR>", "go to previous buffer" },
-  ["<S-l>"] = { ":bn<CR>", "go to next buffer" },
+    { "", group = "Global shift", nowait = true, remap = false },
+    { "<S-h>", ":bp<CR>", desc = "go to previous buffer", nowait = true, remap = false },
+    { "<S-l>", ":bn<CR>", desc = "go to next buffer", nowait = true, remap = false },
 }
 
 local single_mappings = {
-  name = "Global Single",
-  ["q"] = { ":quit<cr>", "quit" },
-  ["<Left>"] = { ":vertical resize -5<cr>", "resize - vertical" },
-  ["<Right>"] = { ":vertical resize +5<cr>", "resize - vertical" },
-  ["<Up>"] = { ":resize +5<cr>", "resize - horizontal" },
-  ["<Down>"] = { ":resize -5<cr>", "resize + horizontal" },
+    { "", group = "Global Single", nowait = true, remap = false },
+    { "<Down>", ":resize -5<cr>", desc = "resize + horizontal", nowait = true, remap = false },
+    { "<Left>", ":vertical resize -5<cr>", desc = "resize - vertical", nowait = true, remap = false },
+    { "<Right>", ":vertical resize +5<cr>", desc = "resize - vertical", nowait = true, remap = false },
+    { "<Up>", ":resize +5<cr>", desc = "resize - horizontal", nowait = true, remap = false },
+    { "q", ":quit<cr>", desc = "quit", nowait = true, remap = false },
 }
 
-which_key.register(leader_mappings, opts)
-which_key.register(control_mappings, opts)
-which_key.register(shift_mappings, opts)
-which_key.register(single_mappings, opts)
+which_key.add(leader_mappings, opts)
+which_key.add(control_mappings, opts)
+which_key.add(shift_mappings, opts)
+which_key.add(single_mappings, opts)
