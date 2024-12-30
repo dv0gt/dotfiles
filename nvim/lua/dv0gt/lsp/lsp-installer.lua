@@ -13,7 +13,7 @@ local servers = {
   "lua_ls",
   "cssls",
   "html",
-  "tsserver",
+  "ts_ls",
   "jsonls",
   "terraformls",
   "tflint",
