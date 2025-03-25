@@ -3,26 +3,20 @@ if not status_ok then
   return
 end
 
-local status_ok, mason_lspconfig = pcall(require, "mason-lspconfig")
-if not status_ok then
+local status_lspconfig_ok, mason_lspconfig = pcall(require, "mason-lspconfig")
+if not status_lspconfig_ok then
   return
 end
 
 local servers = {
-  "angularls",
   "lua_ls",
   "cssls",
   "html",
-  "ts_ls",
   "jsonls",
   "terraformls",
   "tflint",
-  "gopls",
-  "jdtls",
   "yamlls",
-  "kotlin_language_server",
   "marksman",
-  -- "lemminx"
 }
 
 mason.setup()
@@ -46,11 +40,6 @@ for _, server in pairs(servers) do
   if server == "lua_ls" then
     local lua_opts = require("dv0gt.lsp.settings.lua_ls")
     opts = vim.tbl_deep_extend("force", lua_opts, opts)
-  end
-
-  if server == "pyright" then
-    local pyright_opts = require("dv0gt.lsp.settings.pyright")
-    opts = vim.tbl_deep_extend("force", pyright_opts, opts)
   end
 
   if server == "html" then

@@ -5,7 +5,18 @@ end
 
 treesitter.setup({
   -- A list of parser names, or "all"
-  ensure_installed = "all",
+  ensure_installed = {
+    "lua",
+    "vim",
+    "vimdoc",
+    "markdown",
+    "markdown_inline",
+    "terraform",
+    "yaml",
+    "css",
+    "html",
+    "json"
+  },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = true,

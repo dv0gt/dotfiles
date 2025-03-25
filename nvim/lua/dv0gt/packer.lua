@@ -69,17 +69,9 @@ return require("packer").startup(function(use)
 
   use({ "williamboman/mason-lspconfig.nvim" })
 
-  use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
   use({ "RRethy/vim-illuminate" })
 
-  ---@diagnostic disable-next-line: different-requires
-  use({
-    "akinsho/toggleterm.nvim",
-    tag = "v2.*",
-    config = function()
-      require("toggleterm").setup()
-    end,
-  })
+  use({ "akinsho/toggleterm.nvim", tag = "v2.*" })
 
   use({ "windwp/nvim-autopairs" }) -- Autopairs, integrates with both cmp and treesitter
   use("windwp/nvim-ts-autotag")
@@ -108,16 +100,6 @@ return require("packer").startup(function(use)
   use("folke/todo-comments.nvim")
   use("xiyaowong/nvim-transparent")
 
-  --dap
-  use({ "mfussenegger/nvim-dap", version = "0.3.0" })
-  use("leoluz/nvim-dap-go")
-  use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
-  -- use { "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } }
-  -- use {
-  --   "microsoft/vscode-js-debug",
-  --   opt = true,
-  --   run = "npm install --legacy-peer-deps && npm run compile"
-  -- }
   use("David-Kunz/jester")
 
   use("ChristianChiarulli/nvim-ts-rainbow")

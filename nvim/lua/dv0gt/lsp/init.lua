@@ -5,4 +5,3 @@ end
 
 require("dv0gt.lsp.lsp-installer")
 require("dv0gt.lsp.handlers").setup()
-require("dv0gt.lsp.null-ls")

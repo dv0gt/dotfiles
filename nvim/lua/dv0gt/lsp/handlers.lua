@@ -70,33 +70,9 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
-  if client.name == "ts_ls" then
-    client.server_capabilities.document_formatting = false
-  end
-
-  if client.name == "kotlin_language_server" then
-    client.server_capabilities.document_formatting = false
-  end
   if client.name == "yamlls" then
     client.server_capabilities.document_formatting = true
   end
-
-  if client.name == "jdtls" then
-    require("jdtls").setup_dap({ hotcodereplace = "auto" })
-    require("jdtls.setup").add_commands()
-    vim.lsp.codelens.refresh()
-  end
-
-  -- if client.supports_method("textDocument/formatting") then
-  --   vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-  --   vim.api.nvim_create_autocmd("BufWritePre", {
-  --     group = augroup,
-  --     buffer = bufnr,
-  --     callback = function()
-  --       vim.lsp.buf.format({ bufnr = bufnr })
-  --     end,
-  --   })
-  -- end
 
   lsp_signature.on_attach({}, bufnr)
 
