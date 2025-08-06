@@ -24,6 +24,7 @@ local leader_mappings = {
      { "<Leader>ba", ":%bd|e#|bd#<cr>", desc = "delete all buffers but this", nowait = true, remap = false },
      { "<Leader>bb", ":Telescope buffers<cr>", desc = "show open buffers", nowait = true, remap = false },
      { "<Leader>bd", ":bd<cr>", desc = "delete single buffer", nowait = true, remap = false },
+     { "<Leader>br", ":e<CR>", desc = "refresh current buffer", nowait = true, remap = false },
      { "<Leader>cD", ":lua vim.lsp.buf.declaration()<CR>", desc = "Goto declaration", nowait = true, remap = false },
      { "<Leader>cR", ":lua vim.lsp.buf.references()<CR>", desc = "Find references", nowait = true, remap = false },
      { "<Leader>cd", ":lua vim.lsp.buf.definition()<CR>", desc = "Goto definition", nowait = true, remap = false },
