@@ -26,6 +26,9 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 
+-- Do not soft-wrap long lines; scroll horizontally instead.
+vim.opt.wrap = false
+
 -- git-blame settings
 vim.g.gitblame_enabled = 1
 vim.g.gitblame_display_virtual_text = 0

@@ -115,6 +115,9 @@ alias ns='kubens'
 alias git='LANG=en_GB git'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.mavenrc ] && source ~/.mavenrc
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(mise activate bash)"
+export PATH="$HOME/.local/bin:$PATH"
